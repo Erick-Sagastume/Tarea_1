@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading fondogratuito">
+                <div class="form-group">
+                    <img src="imagenes/logo.jpg" style="width: 320px; height:45px; padding:10px;" class="img-responsive floatl-left" alt="Cinque Terre">
+                        <div class="input-group" style="margin:auto; background:#d8a01f; color:#000000; margin-right: 30px;">
+                            <span style="font-size:16px;"><b>Número Formato</b></span>
+                            <input style="width:100px; background-color:#f7e2e2 !important;font-size: 12px;" name="correlativo" id="correlativo" value="0" disabled>
+                            <span style="font-size:16px;"><b> Código</b></span>&nbsp;
+                            <input style="width:45px; background-color:#f7e2e2 !important ;font-size: 12px;" value="0" disabled>
+                        </div>
+                        <center> 
+                        <h3 align="center" class="animate__animated animate__pulse" style="color: red;">Este formato de solicitud es GRATUITO, PROHIBIDA su venta.</h3>
+                    </center>
+                </div>
+<div class="text-center text-danger" style="font-size:16px;">
+</div>
+<h3 align="center" class="animate__animated animate__pulse" style="color: rgb(0, 4, 255);">SOLICITUD DE INSCRIPCION DE COMERCIANTE INDIVIDUAL Y EMPRESA</h3>
+    <h4 style="margin-top:1px;margin-bottom:1px;"><b>Señor Registrador Mercantil General de la República.</b></h4>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+        <span style="font-size:12px;"><b>Primer Nombre</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="P_NOMBRE" id="P_NOMBRE" size="50" />
+        <span class="input-group-addon"></span>
+        <span style="font-size:12px;"><b>Segundo Nombre</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="S_NOMBRE" id="S_NOMBRE" size="40" />
+        <span class="input-group-addon"></span>
+        <span style="font-size:12px;"><b>Otro Nombre</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="O_NOMBRE" id="O_NOMBRE" size="35" />
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+        <span style="font-size:12px;"><b>Primer Apellido</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="P_APELLIDO" id="P_APELLIDO" size="50" />
+        <span class="input-group-addon"></span>
+        <span style="font-size:12px;"><b>Segundo Apellido</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="S_APELLIDO" id="S_APELLIDO" size="40" />
+        <span class="input-group-addon"></span>
+        <span style="font-size:12px;"><b>Apellido Casada</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="A_CASADA" id="A_CASADA" size="32" />
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" style="font-size:12px;"><b>de</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="EDAD" id="EDAD" size="10" value="0" />
+        <span class="input-group-addon" style="font-size:12px;"><b>Años</b></span>
+        <select style="line-height: 20px" name="ESTADO_CIVIL" class="form-control input-sm" width="380" id="ESTADO_CIVIL">
+            <option value="">- Seleccione una Opcion -</option>
+            <option >Soltero</option>
+            <option >Casado</option>
+            <option >Viudo</option>
+        </select>
+        <span class="input-group-addon" style="font-size:12px;">Nacionalidad</span>
+        <input style="font-size:12px;" class="form-control input-sm" name="NACIONALIDAD" id="NACIONALIDAD" size="50" />
+    </div>
+    <br />
+    <div class="input-group">
+        <span style="font-size:12px;"><b>Profesión u Oficio</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="PROFESION" id="PROFESION" size="58" />
+        <span class="input-group-addon"></span>
+        <span style="font-size:12px;"><b>con domicilio en el Departamento de</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="DEPARTAMENTO" id="DEPARTAMENTO" size="90" />
+    </div>
+    <br />
+    <div class="input-group">
+        <span style="font-size:12px;"><b>Con Residencia en:</b></span>
+            <input style="font-size:12px;" class="form-control input-sm" name="DIRECCION" id="DIRECCION" size="180" />
+            </div>  
+    <div class="input-group"><br>
+        <span class="input-group-addon" style="font-size: 15px"><b>DOCUMENTO DE IDENTIFICACIÓN</b></span>
+        &nbsp;<input type="checkbox" name="PASAPORTE_PER" id="PASAPORTE_PER"  onclick="opcion_documento()"> &nbsp;PASAPORTE<br>
+        &nbsp;<input type="checkbox" name="DPI_PER" id="DPI_PER"  onclick="opcion_documento()"> <span style="font-size:11px;"> &nbsp;DOCUMENTO PERSONAL DE IDENTIFICACION (DPI)</span><br>
+        <label id="seleccion_DPI_Pasaporte" style="color:#ff0000;"></label>
+        <input class="form-control" size="30" placeholder="ingrese su pasaporte" name="PASAPORTE" id="PASAPORTE" style="display:none; height:28px; font-size:12px;" />
+        <input class="form-control" size="30" placeholder="ingrese su dpi" name="DPI" id="DPI" value="0" style="display:none; height:28px; font-size:12px;" onclick="valor_null_d()" />
+            </div>
+    <div class="input-group">
+        <span class="input-group-addon" style="font-size:12px;"><b>Nit:</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="NIT" id="NIT" size="30" onclick="valor_null_n()" />
+        <span class="input-group-addon" style="font-size:12px;"><b>Numero Teléfono / Celular:</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="TELEFONO" id="TELEFONO" size="45" />
+        <span class="input-group-addon" style="font-size:12px;"><b>Correo Electrónico:</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" placeholder="ejemplo@gmail.com" name="CORREO" id="CORREO" size="72" />
+    </div>
+    <h6 style="margin-top:2px;margin-bottom:2px;" class="text-center"><b>Atentamente: </b></h6>
+    <h5 style="margin-top:2px;margin-bottom:1px;" class="text-center"><b>PIDO:</b></h5>
+    <div class="input-group">
+        <span class="input-group-addon" style="font-size:12px;"></span>
+        <span><b>1)</b></span>
+        &nbsp;&nbsp;<input type="checkbox" class="custom-control-input" name="INSCRI_COMERCIANTE_INDIVIDUAL" id="INSCRI_COMERCIANTE_INDIVIDUAL" size="22"  onclick="checkIfChecked()" ; />&nbsp;&nbsp;<span><b>Que se me inscriba como comerciante individual</b></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="selecion" style="color:#ff0000"></label>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" style="font-size:12px;"></span>
+        <span><b>2)</b></span>
+        &nbsp;&nbsp;<input type="checkbox" class="custom-control-input" name="INSCRI_EMPRESA" id="INSCRI_EMPRESA" size="22" onclick="checkIfChecked()"  />
+        &nbsp;&nbsp;<span><b>Que se inscriba la siguiente empresa de mi propiedad o Propiedad de:</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="DIRECCION" id="DIRECCION" size="197" />
+    </div>
+   <br>
+    <div class="input-group">
+        <span style="font-size:12px;"><b>Nombre Comercial:&nbsp;</b></span>
+            <input style="font-size:12px;" class="form-control input-sm" name="NOMBRE_COMERCIAL" id="NOMBRE_COMERCIAL" size="180" />
+            </div>
+    <div class="input-group" style="margin-top:5px;">
+        <span style="font-size:12px;"><b>Dirección Completa:</b></span>
+            <input style="font-size:12px;" class="form-control input-sm" name="DIRECCION_COMERCIAL" id="DIRECCION_COMERCIAL" size="180" />
+            </div>
+    <div class="input-group col-lg-12 ">
+        <span class="input-group-addon text-right"><b>Objeto:</b></span>
+    </div>
+        <textarea class="form-control" style="font-size:12px; text-transform: uppercase; text-align: justify" name="OBJETO" id="OBJETO" rows="4" maxlength="2000"></textarea>
+    <br />
+    <div class="input-group">
+        <input type="checkbox" class="custom-control-input" name="INICIO" id="INICIO" size="10"  onclick="inscrib_iniciales()" />
+        &nbsp;&nbsp;&nbsp; <span><b>al inscribirse</b></span>
+        &nbsp;<input type="checkbox" class="custom-control-input" name="AL_INSCRIBIRSE" id="AL_INSCRIBIRSE" size="100"  onclick="inscrib_iniciales()" />
+        &nbsp;&nbsp;&nbsp;<span><b>Capital: Q.</b></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="selecion_1" style="color:#ff0000"></label><input name="monto" placeholder="Ingrese Monto">
+    </div>
+    <br>
+    <span><b>Fecha de inicio de actividades:</b></span>
+    <label for="fecha_nacimiento">Fecha de Inicio: </label>
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" style="font-size:12px;"><b>Categoría: Única</b></span>
+        &nbsp;<input type="checkbox" class="custom-control-input " name="CATEGORIA_UNICA" id="CATEGORIA_UNICA" size="10"  onclick="select_suc_cat_unica()" />
+        &nbsp;<span class="input-group-addon" style="font-size:12px;"><b>Sucursal</b></span>
+        &nbsp;<input type="checkbox" class="custom-control-input " name="CATEGORIA_SUCURSAL" id="CATEGORIA_SUCURSAL" size="10"  onclick="select_suc_cat_unica()" />
+        <label id="seleccion_2" style="color: #ff0000"></label>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" style="font-size:12px;"><b>Administrador, Gerente o Factor:</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="CARGO" id="CARGO" size="170" />
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" style="font-size:12px;"><b>1) Si es casado, indique régimen matrimonial:</b></span>
+        <input class="form-control input-sm " name="REGIMEN_MATRIMONIAL" id="REGIMEN_MATRIMONIAL" size="141" />
+    </div>
+    <div class="input-group">
+        <span style="font-size:13px;" class="input-group-addon"><b>2) Si el Propietario está inscrito como comerciante ó Sociedad, indique No.</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="REGISTRO_COMERCIANTE" id="REGISTRO_COMERCIANTE" size="41" />
+        <span class="input-group-addon" style="font-size:12px;"><b>Folio</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="FOLIO_COMERCIANTE" id="FOLIO_COMERCIANTE" size="38" value="0" />
+        <span class="input-group-addon" style="font-size:12px;"><b>Libro</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="LIBRO_COMERCIANTE" id="LIBRO_COMERCIANTE" size="38" value="0" />
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" style="font-size:12px;"><b>3) Número de Empleados a contratar:</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="CANTIDAD_EMPLEADOS" id="CANTIDAD_EMPLEADOS" size="138" value="0" />
+        <span class="input-group-addon" style="font-size:12px;"><b>Fecha:</b></span>
+        <input style="font-size:12px;" class="form-control input-sm" name="FECHA"  id="FECHA" value="29/07/2023 16:04:11" disabled />
+    </div>
+    <br>
+    <div class="input-group">
+        <span><b>F:</b><hr></span>
+    </div>
+    <br />
+ <h5 class="text-danger text-right" style="margin-right: 7%;">Este Documento debe Imprimirse en tamaño Oficio</h5>
+        <h4 class="text-center text-danger">Ingrese su correo para enviarle una copia de su solicitud a su correo</h4>
+        <center>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ModalSolicitud" style="color: #24046e"id="enviar_1" name="enviar_1">
+                <b>Exportar a PDF</b>
+            </button>
+            <button class="btn btn-danger btn-block" data-dismiss="modal" style="color: #c73509" id="cancelar"><b>Cancelar</b></button>
+        </center> 
+    <div class="modal fade" id="ModalSolicitud" style="width:90%; left:5%;" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                </div>
+                <div class="modal-body" id="mensajeModal">
+                    <h2 class="text-center" style="color: #c73509"><b> Esta seguro,que desea enviar esta solicitud, no podra modificar una vez enviado.</b></h2>
+                </div>
+            </div>
+        </div>
+    </div> 
+                <footer>
+                    <center>
+                        <p style="font-size:20px;">&copy; 2023 - Registro Mercantil General de la República de Guatemala</p>
+                    </center>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
